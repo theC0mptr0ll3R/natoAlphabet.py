@@ -11,6 +11,9 @@ except IndexError:
     sys.exit(0)
 
 for i in arg.upper():
-    print(d[i])
+    try:
+        print(d[i])
+    except KeyError:
+        pass
 
 print('\"... read back, please.\"')
